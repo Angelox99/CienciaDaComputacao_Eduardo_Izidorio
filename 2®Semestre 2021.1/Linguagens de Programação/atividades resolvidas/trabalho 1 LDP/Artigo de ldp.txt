@@ -1,0 +1,50 @@
+Entre os anos de 1943 à 1946, o cientista alemão korand kuse desenvolveu a primeira linguagem de 
+programação, chamada de Plankalkül, porém, sua primeira tentativa de publicar, em 1948,
+não adquiriu relevância profissional para a época, então acabou em desuso. Posteriomente, na década
+de 50 que surgiram as primeiras linguagens de programação modernas, como exemplo o Cobol e o Fortran, em 1955,
+e futuramente o Lisp e o Algol 60, em 1958.
+
+Durante a década de 60, a LDP Simula foi criada, sendo ela a primeira linguagem a comportar o conceito de classes.  
+Consequentemente, os paradigmas da programação foram criados em sua maior parte na década de 70, tal como:
+
+-C: Uma das primeiras linguagens de programação, sendo uma das favoritas e tendo uma das maiores influências do mundp atual,  
+além disso, ela é uma linguagem imperativa de uso geral.
+-Prolog: Foi a primeira linguagem de programação com paradigma lógico, desenvolvida em 1972, utlizada até os dias atuais.
+-PASCAL: É uma linguagem de programação estruturada, sendo comum usa-la para fins acadêmicos, porém sendo deixada de lado para usar linguagens de facil Legibilidade.
+
+ 
+Os anos 80 foram marcado pelo investimento nas linguagens de programação desenvolvidas nas décadas de 60 e 70, como:
+
+-C++: É uma evolução melhorada da linguagem C, considerada uma linguagem de nível intermédiario, orientada a objetos. 
+-Perl: Trata de uma linguagem interpretada cuja maior vantagem é sua adaptação à manipulação de cadeias de caracteres.
+
+Na decada de 90 foi um marco para a linguagem da programaçao moderna, pois originaria das linguagens antigas, 
+as linguagens modernas vieram com um foco inovador para a rede mundial de computadores e para a orientação a objeto, tais como:
+
+-Java: Considerada e classificada uma linguagem de programação orientada a objeto. Que reuniu características de várias outras de linguagens nela, afim de produzir uma ferramenta que "rodasse" em qualquer ambiente.
+-Python: É uma linguagem de programação de alto nível, dinâmica, interpretada, modular, multiplataforma e orientada a objetos. Por ser uma linguagem de sintaxe relativamente simples e de fácil compreensão, 
+ganhou popularidade entre profissionais da indústria tecnológica. 
+
+
+
+     
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
