@@ -1,0 +1,32 @@
+Aula de logica de predicados
+AULA 04
+
+Consultas
+ÁTOMO
+deve retornar um símbolo de verdade.
+sentenças que representam símbolos de verdade, em lógica de predicados, são chamados de ÁTOMOS.
+ÁTOMOS: T OU F.
+TERMOS: OBJETOS
+
+TERMO
+deve retornar um objeto.
+senteças que representam obejtos do domínio são TERMOS.
+
+exemplos de átomos:
+p(f(x,a),x)
+>(*(2,3),2) 
+>(6,2)
+6 > 2
+   T
+
+as funções sempre vão retornar termos(f, g, h (+, -, *, /)), e
+os predicados sempre vão retornar átomos(p, q, r...(>, >=, <, <=, =)).
+
+Fórmulas
+A construção das fórmulas é feita a partir da concatenação de átomos e conectivos.
+São construídas a partir destas regras:
+- Todo átomo é uma fórmula;
+-Se H é fórmula, então (¬H) é uma fórmula;
+-Se H e G são fórmulas, então (H ∨ G) é uma fórmula.
+-Se H é uma fórmula e x˘ uma variável, então ((∀x˘)H) e ((∃x˘)H) são fórmulas.
+

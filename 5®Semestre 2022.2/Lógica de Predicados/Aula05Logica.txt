@@ -1,0 +1,23 @@
+Lógica de Predicados
+Aula 05
+
+Construção de Fórmulas
+
+Átomos: p(x), R e false são fórmulas
+- ~p(x) v R;
+    - Que equivale a (p(x) -> R)
+	- Também fórmula.
+Os quantificadores vão seguir sempre com símbolos de variaveis.
+
+
+Correspondência entre Quantificadores
+
+
+Qualquer um dos quantificadores pode ser definido a partir do outro.
+
+Subfórmula
+- Se H é uma fórmula:
+  - H é uma sub-fórmula;
+  - Se H=(~G), então (~G) é sub-fórmula de H;
+  - 
+
