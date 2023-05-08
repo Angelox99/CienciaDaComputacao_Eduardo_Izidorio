@@ -1,0 +1,77 @@
+1. INTRODUÇÃO
+a) DESCRIÇÃO DO PROJETO
+Desenvolvimento de uma plataforma que possa substituir o sistema atual do RU para melhorar o controle de acesso...
+b) OBJETIVOS DO ESTUDO DE VIABILIDADE
+
+2. ANÁLISE DE MERCADO
+a) Identificação do público-alvo
+Discente,
+Docente,
+Funcionários...
+b) Análise da concorrência
+UFRR...
+c) Identificação das oportunidades de mercado
+Multiplataforma (aplicativo, site),
+Compra de créditos antecipado...
+
+3. ANÁLISE TÉCNICA
+a) Requisitos do sistema
+Acesso a um Smartphone,
+a um Computador...
+b) Tecnologias a serem utilizadas
+Figma,
+Thunkable,
+Wix...
+c) Análise de riscos técnicos
+A compatibilidade como o Banco de Dados do SIGAA,
+A programação da compra dos créditos...
+
+4. ANÁLISE FINANCEIRA
+a) Estimativa de custos
+Pagamento salárial dos funcionários:
+Shelly (Gerente Geral): R$ 12000; 
+Gabriel (Analista): R$ 9000;
+Marcia (Desenvolvedor(a)): R$ 8000;
+Eduardo (Testador): R$ 7000,
+Pagamento de um Servidor,
+...
+b) Estimativa de receitas
+...
+c) Análise de viabilidade financeira
+...
+
+5. ANÁLISE ORGANIZACIONAL
+a) Estrutura organizacional
+Shelly (Gerente Geral), 
+Gabriel (Analista),
+Marcia (Desenvolvedor(a)),
+Eduardo (Testador)
+...
+b) Identificação dos recursos humanos necessários
+...
+c) Identificação das restrições organizacionais
+...
+
+6. ANÁLISE LEGAL
+a) Identificação dos requisitos legais e regulatórios
+LGPD...
+b) Identificação dos possíveis impactos legais
+...
+
+7. CONCLUSÃO
+a) Resumo das principais conclusões do estudo de viabilidade
+
+b) Recomendações para a continuidade ou descontinuidade do projeto
+
+C) ...
+
+
+
+
+
+
+
+
+
+
+
