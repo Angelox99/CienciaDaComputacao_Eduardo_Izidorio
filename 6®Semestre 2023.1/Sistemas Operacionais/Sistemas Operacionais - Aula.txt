@@ -1,0 +1,168 @@
+Sistemas Operacionais - Aula de Processos e Threads
+
+pseudoparalelismo
+modelo de processos:
+todo processo possui sua CPU virtual.
+
+Um processo é caracterizado por um programa em execução.
+cada processo possui:
+ um espaço de endereço;
+ uma lista de alocação de memória (mínimo, máximo);
+ um conjunto de registradores (contador de programa, ponteiro de pilha e outros).
+o sistema operacional controla todos os processos.
+
+criação de processos:há 4 eventos principais que fazem os processos serem criados:
+
+processos principais e processos secundários (Deamons).
+ 
+proc. sec. podem ser exe por um syscall.
+ chamado pelo usuário para criar um novo processo.
+ tarefas em lotes(usuário podem submeter, mesmo que remotament).
+ 
+ término de processos: normalmente processos terminanm por 4 motivos:
+ saída normal; saída por erro; erro fatal; cancelamento por outro processo.
+
+hierarquia de processos:
+
+linux x windows
+
+linux: todos os processos filhos e descendentes formas um grupo de processo;
+windows: não há noção de hierarquia, ao criar um processo, ao pai é dado um identificador especial chamado de HANDLE.
+
+Po
+--> Po.1
+--> Po.2
+	--> Po.2.1
+no linux quando matamos o pai todas as filhos vão junto (ao finalizar um processo pai, todos os processos filhos também são finalizados).
+
+no windows ao matar um processo pai, um dos processos filhos se torna o pai (para matar todos os filhos tem que matar um por um).
+
+estados de processos: Em execução, pronto e bloqueado.
+
+	 EXE
+BLOCK		PRONTO
+
+THREADS
+
+threads - são os microprocessos dentro de um processo, executados quase em paralelos.
+razões para existirem threads: as threads são mais faceis de gerenciar do que processos, pois elas não possuem recursos próprios.
+tem também o desempenho: quando há grande quantidade de E/S, as threads permitem que essas atividades se sobreponham, acelerando a aplicação.
+Paralelismo Real em sistemas com múltiplas CPUs.
+então usar as threads traz alguns benefícios, como a capacidade de resposta, compartilhamento de recursos, economia, utilização de arquiteturas multiprocessador.
+
+Modo Usuário X Modo Núcleo
+neles temos algumas diferenças.
+as Threads no modo núcleo, são mais lentas que o modo usuário, porém tem suporte ao multiprocessamento;
+já as Threads no modo usuário, são mais rápidas porque dispensam o acesso ao núcleo.
+mas também temos as implementações híbridas, que são implementações que tentam combinar as vantagens dos threads de usuários com os Threads de núcleo.
+
+Escalonamento
+da mesma forma que os processos sofrem escalonamento, as threads também têm a mesma necessidade, com as threads ocorre o mesmo que com os processos, elas esperam até serem executadas.
+Como esta alternância é muito rápida, há impressão de que todas as threads são executadas paralelamente.
+
+Temos também o escalonador, que tem como função de imitar as threads do núcleo, poém como melhor desempenho. Consegue ser eficiente por evitar transições desnecessárias entre o espaço usuário e núcleo.
+
+Modelos multithreading
+exitem alguns tipos sendo eles, muitos-para-um; um-para-um; muitos-para-muitos.
+Muitos-para-um: Mapeia muita threads de usuário em apenas uma thread de kernel; Não permite múltiplas threads em paralelo em multiprocessadores.
+Um-para-um: Mapeia para cada thread de usuário uma thread de kernel; Permite múltiplas threads em paralelo; Problema -  criação de thread no kernel prejudica no desempenho.
+Muitos-para-muitos: Mapeia para múltiplos threads de usuário um número menor ou igual de threads de kernel; Permite múltiplas threas em paralelo.
+
+as Threads tem tipos de estados, sendo eles: Executando, Pronta e Bloqueada.
+
+AULA DIA 29/03
+Mostrando como rust funciona.
+
+Comunicação entre processos
+A comunicação entre processos é mais eficiente se for estruturada e não utilizar interrupções.
+
+tipos de comunicações de processos
+- interrupções (um evento externo); é quando ocorre uma parada na execução do programa corrente e desvia a execução para um bloco de código chamado rotina de interrupção, normalmente sendo decorrentes de operações de E/S.
+
+- Condição de Disputa;
+- Região crítica;
+- Formas de exclusão mutua
+- Problemas clássicos
+
+
+Processos competem por recursos copartilhados
+
+o que são recursos: são memória, arquivos, impressoras...
+
+como um processo passa informação para outro processo;
+como garantir que processos não invadam espaços uns dos outros;
+proibindo que mais de um processo leia ou escreva em recursos compartilhados concorrentemente(ao mesmo tempo).
+Dependência entre processos: sequência adequada.
+
+"RECURSOS COMPARTILHADOS = REGIÕES CRÍTICAS"
+
+é uma forma de gerenciar os recursos compartilhados 
+
+exclusão mutua: EXCLUSÃO MÚTUA: Serve para garantir que dois processos ou mais nao acessem uma regiao critica ao mesmo tempo.
+
+n processos não podem ficar para sempre sem acessar a regiao crítica.
+
+sites para leitura de artigos - identificação de corrida de dados.
+- google scholar; tomar cuidado com artigod que nao tiver data de publicação.
+- scopus;
+- elsevier;
+- ieee;
+- springer.
+
+classificação de modelos
+- Modelos baseados em Estado
+- Modelos Baseados em Ações
+- Modelos Mistos
+
+Petri net - modelagem de concorrêncica
+Redes de Petri
+
+
+AULA DIA 03/04 / DIA 05/04
+
+4 condições para uma boa solução Regiõs Críticas
+- 2 processos não podem acessar a mesma região crítica;
+- Nenhuma restrição pode ser feita a CPU;
+- Processos que estao fora da regiao crítica não podem ser bloqueados;
+- Nenhum processo pode ficar esperando enternamente.
+
+Comunicação entre processos
+Espera ocupada
+• Desabilitar interrupções;
+ao desabilitar as interruções viola a condição 4 das boas soluções para a região crítica;
+ 
+• Variáveis de Impedimento (Lock Variables); 
+
+Se a variável está com valor 0 (zero) significa que
+nenhum processo está na região crítica; Se a variável
+está com valor 1 (um) significa que existe um processo
+na região crítica;
+
+• Estrita Alternância (Strict Alternation); 
+é que um processo que
+deseja entrar na sua Região Crítica fica
+constantemente lendo a variável de estado.
+para ser um boa solução ela teria que ter uma boa sinalização.
+
+• Solução de Peterson e Instrução TSL
+consiste em dois procedimentos escritod em ANSI C:
+enter_region();
+leave_region();
+Problema: Caso ambos os processos chamem quase que
+simultaneamente, o processo que armazenou por último é o que
+conta, o primeiro é sobreposto e perdido.
+
+Solução TSL(Test and Set Lock): utiliza resgitradores do hardware;
+TSL RX, LOCK; (lê o conteúdo de lock em RX, e armazena um valor diferente
+de zero (0) em lock – operação indivisível);
+
+Lock == 0, então região crítica "liberada".
+Lock <> 0, então região crítica "ocupada".
+
+
+
+
+
+
+
+
